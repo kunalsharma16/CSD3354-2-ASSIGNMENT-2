@@ -3,13 +3,33 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
-namespace ConsoleApp1
+//kunal sharma C0727250
+// Sohit sharma C0730478
+namespace DelegatesAndEvents
 {
-    class Program
+    public class DelegateExercises
     {
-        static void Main(string[] args)
+        public delegate void MyDelegate(int value);
+
+        public static void Main(String[] args)
         {
+            MyDelegate myDelegate = Method2;
+            myDelegate(50);
         }
-    }
+
+
+        static void Method2(int x)
+        {
+            Console.WriteLine("Method2");
+            Console.WriteLine("Number is" +x);
+            Console.WriteLine();
+        }
+
+       
+
+    
+
+    
 }
+}
+
