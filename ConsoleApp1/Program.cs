@@ -9,20 +9,19 @@ namespace DelegatesAndEvents
 {
     public class DelegateExercises
     {
-        public delegate void MyDelegate(int value);
+        public delegate void MyDelegate();
 
         public static void Main(String[] args)
         {
-            MyDelegate myDelegate = Method2;
-            myDelegate(50);
+            MyDelegate myDelegate = Method1;
+            myDelegate();
         }
 
 
-        static void Method2(int x)
+        public static void Method1()
         {
-            Console.WriteLine("Method2");
-            Console.WriteLine("Number is" +x);
-            Console.WriteLine();
+            Console.WriteLine("Method1");
+            Console.ReadLine();
         }
 
        
