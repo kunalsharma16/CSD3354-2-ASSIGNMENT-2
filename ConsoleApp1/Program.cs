@@ -11,41 +11,25 @@ namespace DelegatesAndEvents
         public static void Main()
         {
             DelegateExercises delegateExercises = new DelegateExercises();
-            delegateExercises.method3();
+            delegateExercises.Method3();
             Console.ReadLine();
         }
-        
+        public delegate void MyDelegate();
         public class DelegateExercises
         {
-            public delegate int MyDelegate(int value);
-            int Method1(int intMethod1)
+           void Method1()
 
             {
-                return intMethod1 * 4;
-
+                Console.WriteLine("Method1");
             }
 
-            int method2(int intmethod1)
-            {
-                return intmethod1 * 20;
-            }
-
-            public void Method4(MyDelegate myDelegate)
-            {
-                for (int i = 1; i <= 5; i++)
-                    Console.WriteLine(myDelegate(i) + " ");
-
-            }
-
-            public void method3()
+            public void Method3()
             {
                 MyDelegate myDelegate = new MyDelegate(Method1);
-                Method4(myDelegate);
-                myDelegate = new MyDelegate(method2);
-                Method4(myDelegate);
+               myDelegate();
             }
 
-
+         
 
 
 
