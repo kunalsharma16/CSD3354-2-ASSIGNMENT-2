@@ -13,11 +13,20 @@ namespace DelegatesAndEvents
 
         public static void Main(String[] args)
         {
-            MyDelegate myDelegate = Method2;
+            MyDelegate myDelegate = Method1;
+            myDelegate+=Method3;
             myDelegate(50);
         }
 
+        public static void Method1(int num1)
+        {
+            Console.WriteLine(num1 * 2);
+        }
 
+        public static void Method3(int num2)
+        {
+            Console.WriteLine(num2 * 10);
+        }
         public static void Method2(int x)
         {
             Console.WriteLine("Method2");
@@ -25,9 +34,7 @@ namespace DelegatesAndEvents
             Console.ReadLine();
         }
 
-       
-
-    
+        
 
     
 }
